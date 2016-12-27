@@ -1,0 +1,15 @@
+{{#each userlist}}
+    <div>
+        ___________________________________________
+        <div>Page load time: {{pageLoadTime}} ms</div>
+        {{#with userAgent}}
+        <ul>
+            <li>{{browser.name}} - {{browser.version}}</li>
+            <li>{{os.name}} - {{os.version}}</li>
+            {{#if device.model}}
+                <li>{{device.model}} - {{device.vendor}} - {{device.type}}</li>
+            {{/if}}
+        </ul>
+        {{/with}}
+    </div>
+{{/each}}
